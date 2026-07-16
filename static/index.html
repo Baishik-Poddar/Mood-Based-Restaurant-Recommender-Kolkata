@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Restaurant Recommender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-5">
+            <h1>Find Your Perfect Restaurant</h1>
+            <p class="lead">Let your mood guide you to your next meal</p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="recommendationForm" class="p-4 shadow rounded">
+                    <div class="mb-3">
+                        <label for="mood" class="form-label">How are you feeling today?</label>
+                        <div class="mb-2">
+                            <div class="btn-group mood-buttons w-100" role="group">
+                                <button type="button" class="btn btn-outline-primary mood-option" data-mood="happy">Happy</button>
+                                <button type="button" class="btn btn-outline-primary mood-option" data-mood="sad">Sad</button>
+                                <button type="button" class="btn btn-outline-primary mood-option" data-mood="bored">Bored</button>
+                                <button type="button" class="btn btn-outline-primary mood-option" data-mood="hungry">Hungry</button>
+                                <button type="button" class="btn btn-outline-primary mood-option" data-mood="tired">Tired</button>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="mood" required placeholder="Enter your mood or select from above">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Preferred Location (Optional)</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter area or locality">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="priceRange" class="form-label">Price Range (Optional)</label>
+                        <select class="form-select" id="priceRange">
+                            <option value="">Any</option>
+                            <option value="low">Budget Friendly (≤₹500)</option>
+                            <option value="medium">Mid-Range (₹500-₹1500)</option>
+                            <option value="high">Premium (>₹1500)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Find Restaurants</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="results" class="row mt-5">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+
+        <div id="loading" class="text-center d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

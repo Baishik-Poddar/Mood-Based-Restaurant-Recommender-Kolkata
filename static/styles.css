@@ -1,0 +1,131 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Mood buttons styles */
+.mood-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.mood-option {
+    flex: 1 0 auto;
+    padding: 6px 10px;
+    border-radius: 20px !important;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.mood-option:hover {
+    transform: scale(1.05);
+}
+
+.mood-option.active {
+    background-color: #4a90e2;
+    color: white;
+    border-color: #4a90e2;
+}
+
+/* Restaurant card styles */
+.restaurant-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card .card-body {
+    padding: 20px;
+}
+
+.restaurant-card .rating {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.restaurant-card .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.features-list li {
+    display: inline-block;
+    margin-right: 15px;
+    color: #7f8c8d;
+}
+
+.features-list li i {
+    margin-right: 5px;
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        margin-bottom: 20px;
+    }
+    
+    .restaurant-card {
+        margin-bottom: 15px;
+    }
+
+    .mood-buttons {
+        flex-direction: column;
+    }
+} 
