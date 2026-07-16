@@ -19,4 +19,4 @@ RUN mkdir -p model
 RUN python model/train_model.py
 
 # Start the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "$PORT"] 
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
