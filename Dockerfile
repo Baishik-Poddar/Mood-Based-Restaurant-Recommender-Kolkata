@@ -18,8 +18,5 @@ RUN mkdir -p model
 # Train the model
 RUN python model/train_model.py
 
-# Make port 80 available
-EXPOSE 80
-
 # Start the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"] 
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "$PORT"] 
